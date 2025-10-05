@@ -32,9 +32,6 @@ A modern, responsive dashboard application built with vanilla HTML, CSS, and Jav
 ├── dashboard-styles.css        # CSS styles and responsive design
 ├── dashboard-script.js         # JavaScript functionality and state management
 ├── dashboard-data.json         # Initial data structure for categories and widgets
-├── index.html                  # Original portfolio website (preserved)
-├── styles.css                  # Original portfolio styles (preserved)
-├── script.js                   # Original portfolio script (preserved)
 └── README.md                   # Project documentation
 ```
 
