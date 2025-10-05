@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Dashboard - Accuknox Assignment</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="breadcrumb">
+                    <span>Home</span>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Dashboard V2</span>
+                </div>
+            </div>
+            
+            <div class="nav-center">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="globalSearch" placeholder="Q Search anything..." class="search-input">
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <div class="nav-controls">
+                    <button class="nav-btn" id="addWidgetBtn">
+                        <i class="fas fa-plus"></i>
+                        Add Widget
+                    </button>
+                    <button class="nav-btn" id="refreshBtn">
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                    <button class="nav-btn" id="menuBtn">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <div class="time-filter">
+                        <i class="fas fa-clock"></i>
+                        <select id="timeFilter">
+                            <option value="2">Last 2 days</option>
+                            <option value="7">Last 7 days</option>
+                            <option value="30">Last 30 days</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="nav-icons">
+                    <button class="icon-btn">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <button class="icon-btn">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                    <button class="icon-btn">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard Content -->
+    <main class="dashboard-main">
+        <div class="dashboard-container">
+            <!-- Dashboard Categories will be dynamically generated here -->
+            <div id="dashboardContent"></div>
+        </div>
+    </main>
+
+    <!-- Add Widget Modal -->
+    <div id="addWidgetModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Widget</h2>
+                <button class="close-btn" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-instructions">
+                Personalise your dashboard by adding the following widget
+            </div>
+            
+            <div class="modal-tabs">
+                <button class="modal-tab active" data-tab="cspm">CSPM</button>
+                <button class="modal-tab" data-tab="cwpp">CWPP</button>
+                <button class="modal-tab" data-tab="image">Image</button>
+                <button class="modal-tab" data-tab="ticket">Ticket</button>
+            </div>
+            
+            <div class="widget-selection-list" id="widgetSelectionList">
+                <!-- Widget selection items will be populated here -->
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                <button type="button" class="btn btn-primary" id="confirmBtn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Widget Management Modal -->
+    <div id="widgetManagementModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Manage Widgets</h2>
+                <button class="close-btn" id="closeManagementModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="search-widgets">
+                    <input type="text" id="widgetSearch" placeholder="Search widgets...">
+                </div>
+                
+                <div class="widget-list" id="widgetList">
+                    <!-- Widget list will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="dashboard-script.js"></script>
+</body>
+</html>

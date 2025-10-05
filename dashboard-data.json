@@ -1,0 +1,116 @@
+{
+  "categories": [
+    {
+      "id": "cnapp-dashboard",
+      "name": "CSPM Executive Dashboard",
+      "widgets": [
+        {
+          "id": "cloud-accounts",
+          "name": "Cloud Accounts",
+          "type": "donut-chart",
+          "content": "4 Total",
+          "data": {
+            "connected": 2,
+            "notConnected": 2
+          },
+          "description": "Shows connected and not connected cloud accounts"
+        },
+        {
+          "id": "cloud-account-risk",
+          "name": "Cloud Account Risk Assessment",
+          "type": "donut-chart",
+          "content": "9983 Total",
+          "data": {
+            "failed": 1689,
+            "warning": 681,
+            "notAvailable": 360,
+            "passed": 7253
+          },
+          "description": "Risk assessment breakdown for cloud accounts"
+        }
+      ]
+    },
+    {
+      "id": "cwpp-dashboard",
+      "name": "CWPP Dashboard",
+      "widgets": [
+        {
+          "id": "namespace-alerts",
+          "name": "Top 5 Namespace Specific Alerts",
+          "type": "bar-chart",
+          "content": "No Graph data available!",
+          "data": {},
+          "description": "Shows top namespace specific alerts"
+        },
+        {
+          "id": "workload-alerts",
+          "name": "Workload Alerts",
+          "type": "bar-chart",
+          "content": "No Graph data available!",
+          "data": {},
+          "description": "Displays workload-related alerts"
+        }
+      ]
+    },
+    {
+      "id": "registry-scan",
+      "name": "Registry Scan",
+      "widgets": [
+        {
+          "id": "image-risk-assessment",
+          "name": "Image Risk Assessment",
+          "type": "progress-bar",
+          "content": "1470 Total Vulnerabilities",
+          "data": {
+            "critical": 9,
+            "high": 150,
+            "medium": 311,
+            "low": 1000
+          },
+          "description": "Shows vulnerability assessment for container images"
+        },
+        {
+          "id": "image-security-issues",
+          "name": "Image Security Issues",
+          "type": "progress-bar",
+          "content": "8 Total Images",
+          "data": {
+            "critical": 2,
+            "high": 2,
+            "medium": 2,
+            "low": 2
+          },
+          "description": "Displays security issues found in container images"
+        }
+      ]
+    }
+  ],
+  "availableWidgetTypes": [
+    {
+      "type": "donut-chart",
+      "name": "Donut Chart",
+      "description": "Circular chart with data segments"
+    },
+    {
+      "type": "bar-chart",
+      "name": "Bar Chart",
+      "description": "Horizontal or vertical bar visualization"
+    },
+    {
+      "type": "progress-bar",
+      "name": "Progress Bar",
+      "description": "Horizontal progress indicator"
+    },
+    {
+      "type": "text-widget",
+      "name": "Text Widget",
+      "description": "Simple text display widget"
+    },
+    {
+      "type": "metric-card",
+      "name": "Metric Card",
+      "description": "Card displaying key metrics"
+    }
+  ]
+}
+
